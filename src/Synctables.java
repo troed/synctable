@@ -66,7 +66,7 @@ public class Synctables {
 
 //    static int[] linelengths = new int[]{160,204,230}; // Enchanted Land
 //    static int[] linelengths = new int[]{160,186,204,230}; // SoWatt / Cuddly
-//    static int[] linelengths = new int[]{160,230,184,204,54,80,158,186,206}; // pre-2006 state of the art (5 lines)
+//    static int[] linelengths = new int[]{160,230,184,204,54,80,158,186}; // pre-2006 state of the art (6 lines)
     static int[] linelengths = new int[]{160,162,230,184,204,0,54,56,80,158,186,206}; // Max 12 possible (4 lines)
 // no mono switches - can use rasters/background color
 //    static int[] linelengths = new int[]{160,162,204,0,158,206}; // all possible (8 lines needed)
@@ -207,7 +207,7 @@ public class Synctables {
                         }
                     }
                 } else {
-                    // when the search space is too big - do random walks and see if and offset can be found
+                    // when the search space is too big - do random walks and see if an offset can be found
                     // 4 line lengths 18 lines takes 10 seconds or so on a Core 2 Duo so this is a very valid approach
                     while (countmissing > 0 && dis.available() == 0 && System.currentTimeMillis() < end) {
                         int bytes = 0;
